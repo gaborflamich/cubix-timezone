@@ -1,0 +1,30 @@
+$grey: #d8d8d8;
+$grey-light: #eeeeee;
+
+.list{
+    padding: 0;
+    &-item{
+        list-style: none;
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid $grey;
+        &:hover{
+            background: $grey-light;
+        }
+    }
+}
+.divider{
+    width: 100%;
+    border-bottom: 1px solid $grey;
+}
+
+.search{
+    &-input{
+        padding: 10px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 360px;
+    }
+}

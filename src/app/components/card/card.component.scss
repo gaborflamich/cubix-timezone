@@ -1,0 +1,24 @@
+.card{
+    background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 30px;
+    min-height: 60px;
+    max-width: 500px;
+    opacity: .5;
+    &.current{
+        opacity: 1;
+    }
+    &-footer{
+        display: flex;
+        gap: 20px;
+    }
+}
+.btn{
+    background: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}

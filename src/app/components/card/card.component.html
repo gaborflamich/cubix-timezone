@@ -1,0 +1,16 @@
+<div class="card" [ngClass]="{current: isCurrent}">
+    <div class="card-header">{{ title }}</div>
+    <div class="card-body">
+        <p>{{ timeZone }}</p>
+        <p>{{ localTime | date: 'yyyy.MM.dd HH:mm ss'}}</p>
+    </div>
+    @if(isCurrent || activeService.isSearchActive(searchTerm)){
+        <div class="card-footer">
+            <button class="btn" (click)="onUpdate($event)">Update</button>
+            @if(!isCurrent){
+                <button class="btn" (click)="onMakeCurrent($event)">Make current</button>
+            }
+        </div>
+    }
+    
+</div>

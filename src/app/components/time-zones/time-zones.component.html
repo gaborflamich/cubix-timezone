@@ -1,0 +1,12 @@
+<form class="search">
+    <input class="search-input" type="text" id="timeZone" name="timeZone" [(ngModel)]="searchTerm" [placeholder]="placeholder" (input)="onSearchChange($event)">
+  </form>
+  
+
+@if(activeService.isSearchActive(searchTerm)) {
+    <ul class="list">
+        @for (item of timeZones | filterTimeZones:searchTerm ; track $index) {
+            <li class="list-item" (click)="onClickZone(item)">{{item}}</li>
+        }
+    </ul>
+}
